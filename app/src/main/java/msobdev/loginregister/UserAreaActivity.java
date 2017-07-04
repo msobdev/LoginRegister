@@ -1,5 +1,6 @@
 package msobdev.loginregister;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -17,7 +18,15 @@ public class UserAreaActivity extends AppCompatActivity {
         final EditText etAge = (EditText) findViewById(R.id.etAge);
 
         final TextView tvWelcome = (TextView) findViewById(R.id.tvWelcome);
-        final TextView tvAge = (TextView) findViewById(R.id.tvAge);
-        final TextView tvUsername = (TextView) findViewById(R.id.tvUsername);
+
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("name");
+        String username = intent.getStringExtra("username");
+        int age = intent.getIntExtra("age", -1);
+
+        String welcomeMessage = name + " welcome to your user area";
+        tvWelcome.setText(welcomeMessage);
+        etUsername.setText(username);
+        etAge.setText(age + "");
     }
 }
