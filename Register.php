@@ -1,8 +1,8 @@
 <?php
   $con = mysqli_connect("localhost", "id2145584_msobdev", "mypass", "id2145584_msobdevdb");
 
-  $name = $_POST["name"]
-  $age = $_POST["age"]
+  $name = $_POST["name"];
+  $age = $_POST["age"];
   $username = $_POST["username"];
   $password = $_POST["password"];
 
